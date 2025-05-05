@@ -212,53 +212,138 @@ nav a:hover {
   }
 }
 
-/* Footer */
-.footer {
-  width: auto;
+
+
+/* Основные стили футера */
+.site-footer {
   min-height: 355px;
-  /* Изменил height на min-height */
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-sizing: border-box;
-  background-color: #c1a96f;
+  background-color: #C1A96F;
   border-radius: 8px;
+  padding: 2.5rem 0;
 }
 
-.doc a {
+/* Сетка футера */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Колонки футера */
+.footer-brand-col {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  order: 1;
+}
+
+.footer-contacts-col {
+  order: 2;
+}
+
+.footer-details-col {
+  order: 3;
+}
+
+.footer-contacts-col,
+.footer-details-col {
+  text-align: left;
+}
+
+/* Логотип */
+.footer-logo {
+  max-width: 200px;
+}
+
+/* Секции футера */
+.footer-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Контент */
+.footer-content {
+  flex-grow: 1;
+}
+
+.footer-item {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Ссылки */
+.footer-link-anchor {
   color: white;
   text-decoration: underline;
   transition: opacity 0.3s;
+  display: inline-block;
+  margin-top: 8px;
 }
 
-.doc a:hover {
+.footer-link-anchor:hover {
   opacity: 0.8;
+  color: white;
 }
 
-/* Адаптивные стили */
-@media (min-width: 768px) {
-  .footer {
-    margin-top: 20px;
-    text-align: left;
-  }
-
-  .logo-container {
-    margin-left: 0 !important;
-  }
-}
-
+/* Адаптация для мобильных */
 @media (max-width: 767px) {
-  .contact-description,
-  .details-description {
-    font-size: 0.9rem;
-  }
-
-  .footer {
+  .site-footer {
     min-height: auto;
-    padding: 20px 0;
+    padding: 1.5rem 0 2rem;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "contacts"
+      "details"
+      "brand";
+  }
+  
+  .footer-contacts-col {
+    grid-area: contacts;
+    order: 1;
+  }
+  
+  .footer-details-col {
+    grid-area: details;
+    order: 2;
+    margin-top: 1.5rem;
+  }
+  
+  .footer-brand-col {
+    grid-area: brand;
+    order: 3;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+  }
+  
+  .footer-logo {
+    margin: 0 auto;
+  }
+  
+  .footer-item {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+  
+  .footer-heading {
+    margin-bottom: 1rem;
   }
 }
+
 
 /* Help-content */
 .help-content {

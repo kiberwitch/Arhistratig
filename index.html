@@ -334,6 +334,23 @@
                         <div class="certificate-caption">
                             Письмо от Митрополита
                         </div>
+
+<style>
+    .certificate-caption {font-family: 'Manrope';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 19px;
+                        line-height: 24px;
+                        /* identical to box height, or 126% */
+                        
+                        color: #C1A96F;
+                         } 
+</style>
+
+
+
+
+
                         <img src="assets/images/line3.png" alt="" class="divider-line img-fluid">
                     </div>
                     <div class="certificate-col">
@@ -405,13 +422,6 @@
     width: 100%;
 }
 
-/* Подпись к изображению */
-.certificate-caption {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    color: #333;
-    font-weight: 500;
-}
 
 /* Разделительная линия */
 .divider-line {
@@ -606,19 +616,102 @@
 
 
 
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="assets/images/break1.png" class="img-fluid">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="assets/images/break2.png" class="img-fluid">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="assets/images/break3.png" class="img-fluid">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Первое изображение -->
+                            <div class="col-md-4 position-relative">
+                                <img src="assets/images/break1.png" class="img-fluid">
+                                <!-- Горизонтальная стрелка для десктопа -->
+                                <div class="compact-arrow d-none d-md-block"></div>
+                                <!-- Вертикальная стрелка для мобилок -->
+                                <div class="arrow-down d-md-none"></div>
+                            </div>
+                            
+                            <!-- Второе изображение -->
+                            <div class="col-md-4 position-relative">
+                                <img src="assets/images/break2.png" class="img-fluid">
+                                <!-- Горизонтальная стрелка для десктопа -->
+                                <div class="compact-arrow d-none d-md-block"></div>
+                                <!-- Вертикальная стрелка для мобилок -->
+                                <div class="arrow-down d-md-none"></div>
+                            </div>
+                            
+                            <!-- Третье изображение -->
+                            <div class="col-md-4">
+                                <img src="assets/images/break3.png" class="img-fluid">
+                            </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <style>
+                    /* Горизонтальные стрелки (десктоп) */
+                    .compact-arrow {
+                        width: 60px;
+                        height: 3px;
+                        background-color: #B59A4D;
+                        position: absolute;
+                        right: -30px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        z-index: 1;
+                    }
+                    
+                    .compact-arrow::after {
+                        content: '';
+                        position: absolute;
+                        right: -8px;
+                        top: 50%;
+                        transform: translateY(-50%) rotate(-45deg);
+                        width: 15px;
+                        height: 15px;
+                        border-right: 3px solid #B59A4D;
+                        border-bottom: 3px solid #B59A4D;
+                    }
+                    
+                    /* Вертикальные стрелки (мобилки) */
+                    .arrow-down {
+                        width: 5px;
+                        height: 50px; /* Уменьшенная высота для мобилок */
+                        background-color: #B59A4D;
+                        position: relative;
+                        margin: 20px auto; /* Уменьшенные отступы */
+                        display: none; /* По умолчанию скрыта */
+                    }
+                    
+                    .arrow-down::after {
+                        content: '';
+                        position: absolute;
+                        left: -10px;
+                        bottom: -15px;
+                        width: 20px;
+                        height: 20px;
+                        border-left: 4px solid #B59A4D;
+                        border-bottom: 4px solid #B59A4D;
+                        transform: rotate(-45deg);
+                    }
+                    
+                    /* Адаптация для мобильных */
+                    @media (max-width: 767px) {
+                        .row {
+                            flex-direction: column;
+                        }
+                        
+                        .arrow-down {
+                            display: block;
+                        }
+                        
+                        .compact-arrow {
+                            display: none;
+                        }
+                        
+                        .col-md-4 {
+                            margin-bottom: 30px;
+                        }
+                    }
+                    </style>
+
+
+
     </section>
 
     <section class="liner">
@@ -689,61 +782,60 @@
     </section>
 
     <section id="contacts">
-        <footer class="footer text-white mt-5">
+        <footer class="site-footer text-white mt-5">
             <div class="container">
-                <div class="row gx-4 gy-4 align-items-start">
-                    <!-- Логотип -->
-                    <div class="col-12 col-md-4 text-center text-md-start">
-                        <div class="logo-container mb-3 mx-auto mx-md-0" style="max-width: 200px;">
+                <div class="footer-grid">
+                    <!-- Логотип (первая колонка в десктопе, последняя в мобиле) -->
+                    <div class="footer-brand-col">
+                        <div class="footer-logo mb-4 mx-auto mx-md-0">
                             <img src="assets/images/logo.png" alt="Логотип компании" class="img-fluid">
                         </div>
                     </div>
-
+        
                     <!-- Контакты -->
-                    <div class="col-12 col-md-4">
-                        <div class="contact-info text-center text-md-start">
-                            <h2 class="mb-3">Контакты</h2>
-                            <div class="contact-description">
-                                <div class="mb-2">
+                    <div class="footer-contacts-col">
+                        <div class="footer-section">
+                            <h2 class="footer-heading mb-3">Контакты</h2>
+                            <div class="footer-content">
+                                <div class="footer-item mb-3">
                                     <strong>Адрес:</strong><br>
                                     г. Краснодар, ул. Рождественская Набережная 45/1, оф 4
                                 </div>
-                                <div class="mb-2">
+                                <div class="footer-item mb-3">
                                     <strong>Телефон:</strong><br>
                                     8 988 140-14-79
                                 </div>
-                                <div class="doc">
-                                    <a href="https://disk.yandex.ru/d/ljALqyUo1dbUqw"
-                                        class="text-decoration-underline">Документы</a>
+                                <div class="footer-link">
+                                    <a href="https://disk.yandex.ru/d/ljALqyUo1dbUqw" class="footer-link-anchor">Документы</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+        
                     <!-- Реквизиты -->
-                    <div class="col-12 col-md-4">
-                        <div class="details text-center text-md-start">
-                            <h2 class="mb-3">Реквизиты</h2>
-                            <div class="details-description">
-                                <div class="mb-2">
+                    <div class="footer-details-col">
+                        <div class="footer-section">
+                            <h2 class="footer-heading mb-3">Реквизиты</h2>
+                            <div class="footer-content">
+                                <div class="footer-item mb-2">
                                     <strong>ИНН/КПП:</strong> 2308269784/230801001
                                 </div>
-                                <div class="mb-2">
+                                <div class="footer-item mb-2">
                                     <strong>ОГРН:</strong> 1192375076310
                                 </div>
-                                <div class="mb-2">
+                                <div class="footer-item mb-2">
                                     <strong>ОКПО:</strong> 42072670
                                 </div>
-                                <div class="mb-2">
+                                <div class="footer-item mb-2">
                                     <strong>р/с:</strong> 40701810506350000002
                                 </div>
-                                <div class="mb-2">
+                                <div class="footer-item mb-2">
                                     в филиале «ЦЕНТРАЛЬНЫЙ» банка ВТБ (ПАО) г. Краснодар
                                 </div>
-                                <div class="mb-2">
+                                <div class="footer-item mb-2">
                                     <strong>к/с:</strong> 30101810145250000411
                                 </div>
-                                <div>
+                                <div class="footer-item">
                                     <strong>БИК:</strong> 044525411
                                 </div>
                             </div>
@@ -751,8 +843,12 @@
                     </div>
                 </div>
             </div>
-            <div class="powered-by" style="display: none">{$POWERED_BY$}</div>
+            <div class="footer-powered" style="display: none">{$POWERED_BY$}</div>
         </footer>
+
+
+
+
     </section>
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
