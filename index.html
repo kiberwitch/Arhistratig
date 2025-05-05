@@ -329,7 +329,7 @@
                 <div class="col-6 col-lg-3">
                     <div class="image-wrapper-2">
                         <img src="assets/images/sert1.png" alt="" class="img-fluid"
-                            style="height: 100%; margin-top: 53px;">
+                            style=" margin-top: 53px;">
                     </div>
                     <div class="image-text">
                         Письмо от Митрополита
@@ -339,7 +339,7 @@
                 <div class="col-6 col-lg-3">
                     <div class="image-wrapper-2">
                         <img src="assets/images/sert2.png" alt="" class="img-fluid"
-                            style="height: 100%; margin-top: 53px;">
+                            style=" margin-top: 53px;">
                     </div>
                     <div class="image-text">
                         Письмо Сенатора
@@ -365,87 +365,53 @@
         <div style="padding-top: 100px; margin-top: -100px;"></div>
         <div class="container-fluid">
             <div class="container--info">
-                <div class="restoration-block">
-                    <div class="restoration-row">
-                        <!-- Основной блок (слева на десктопе, снизу на мобилке) -->
-                        <div class="restoration-col restoration-main">
-                            <div class="restoration-card">
-                                <div class="restoration-header">
-                                    <b>фонд оказал помощь в ремонте и восстановлении:</b>
-                                    <button class="restoration-year">
-                                        <span>В 2023-2024 Г.</span>
-                                    </button>
-                                </div>
-                                <div class="restoration-content">
-                                    <b>1. Свято-Николаевскому храму в Новогнатовке</b>, который пострадал от прямого
-                                    попадания
-                                    снаряда в алтарную часть. Прошли масштабные работы с заменой практически всей
-                                    внутренней отделки,
-                                    усилением каркаса, утеплением. Небольшой храм стал истинным символом возрождения!
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Блок, который должен быть справа на десктопе, но первым на мобилке -->
-                        <div class="restoration-col restoration-secondary">
-                            <div class="restoration-description">
-                                Во время боев за освобождение городов и сёл Донецкой Народной Республики были разрушены
-                                и сильно
-                                пострадали десятки храмов. Прямой наводкой украинские националисты били по беззащитным
-                                православным святыням!
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <style>
                     .restoration-block {
                         max-width: 1600px;
                         margin: 0 auto;
                         padding: 0 15px;
                     }
-
-                    /* Строка с колонками */
+                    
                     .restoration-row {
                         display: flex;
                         align-items: center;
                         gap: 30px;
                     }
-
-                    /* Общие стили колонок */
+                    
                     .restoration-col {
                         flex: 1;
                         min-width: 0;
-                        /* Для правильного сжатия */
                     }
-
-                    /* Карточка с информацией о восстановлении */
+                    
                     .restoration-card {
                         background: #fff;
                         border-radius: 8px;
                         padding: 25px;
                         box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
                     }
-
-                    /* Заголовок карточки */
+                    
                     .restoration-header {
                         font-family: 'Cormorant Garamond';
-                        font-style: normal;
                         font-weight: 700;
                         font-size: 39px;
                         line-height: 45px;
                         text-transform: uppercase;
                         color: #C1A96F;
-
-
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: baseline;
+                        gap: 15px;
                     }
-
-                    /* Кнопка с годом */
+                    
+                    .restoration-header-text {
+                        display: inline;
+                        max-width: calc(100% - 180px); /* Оставляем место для кнопки */
+                    }
+                    
                     .restoration-year {
                         padding: 5px 40px;
                         border: none;
                         font-family: 'Manrope';
-                        font-style: normal;
                         font-weight: 500;
                         font-size: 19px;
                         line-height: 45px;
@@ -454,58 +420,118 @@
                         color: #FFFFFF;
                         background: #C1A96F;
                         border-radius: 40px;
-
-
+                        white-space: nowrap;
                     }
-
-
-
-                    /* Основной текст */
-                    .restoration-content {
+                    
+                    .restoration-content b {
                         font-family: 'Manrope';
-                        font-style: normal;
                         font-weight: 700;
                         font-size: 24px;
                         line-height: 33px;
                         color: #261A0C;
                     }
-
-                    /* Правый блок с описанием */
-                    .restoration-description {
+                    
+                    .restoration-content p {
                         font-family: 'Manrope';
-                        font-style: normal;
+                        font-size: 24px;
+                        line-height: 33px;
+                    }
+                    
+                    .restoration-description {
+                        width: 350px;
+                        margin-left: 50px;
+                        font-family: 'Manrope';
                         font-weight: 500;
                         font-size: 24px;
                         line-height: 36px;
                         color: #C1A96F;
                     }
-
-                    /* Десктопная версия */
+                    
                     @media (min-width: 769px) {
                         .restoration-main {
                             order: 1;
                         }
-
                         .restoration-secondary {
                             order: 2;
                         }
                     }
-
-                    /* Мобильная версия */
+                    
                     @media (max-width: 768px) {
                         .restoration-row {
                             flex-direction: column;
+                            gap: 20px;
                         }
-
+                        
                         .restoration-secondary {
                             order: 1;
                         }
-
+                        
                         .restoration-main {
                             order: 2;
                         }
+                        
+                        .restoration-header {
+                            flex-direction: column;
+                            align-items: flex-start;
+                            gap: 10px;
+                            font-size: 32px;
+                            line-height: 38px;
+                        }
+                        
+                        .restoration-header-text {
+                            max-width: 100%;
+                            display: block;
+                            width: 100%;
+                        }
+                        
+                        .restoration-year {
+                            margin-top: 10px;
+                            font-size: 17px;
+                            padding: 5px 30px;
+                        }
+                        
+                        .restoration-description {
+                            width: auto;
+                            margin-left: 0;
+                            font-size: 20px;
+                            line-height: 30px;
+                        }
+                        
+                        .restoration-content b,
+                        .restoration-content p {
+                            font-size: 20px;
+                            line-height: 28px;
+                        }
                     }
-                </style>
+                    </style>
+                    
+                    <div class="restoration-block">
+                        <div class="restoration-row">
+                            <div class="restoration-col restoration-main">
+                                <div class="restoration-card">
+                                    <div class="restoration-header">
+                                        <span class="restoration-header-text">фонд оказал помощь в ремонте и восстановлении:</span>
+                                        <button class="restoration-year">
+                                            <span>В 2023-2024 Г.</span>
+                                        </button>
+                                    </div>
+                                    <div class="restoration-content">
+                                        <b>1. Свято-Николаевскому храму в Новогнатовке</b>
+                                        <p>который пострадал от прямого попадания снаряда в алтарную часть. Прошли масштабные работы с заменой практически всей внутренней отделки, усилением каркаса, утеплением. Небольшой храм стал истинным символом возрождения!</p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="restoration-col restoration-secondary">
+                                <div class="restoration-description">
+                                    Во время боев за освобождение городов и сёл Донецкой Народной Республики были разрушены и сильно пострадали десятки храмов. Прямой наводкой украинские националисты били по беззащитным православным святыням!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-4">
