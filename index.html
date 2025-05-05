@@ -325,37 +325,111 @@
                 </div>
             </div>
 
-            <div class="row text-center mt-5">
-                <div class="col-6 col-lg-3">
-                    <div class="image-wrapper-2">
-                        <img src="assets/images/sert1.png" alt="" class="img-fluid"
-                            style=" margin-top: 53px;">
+            <div class="certificates-grid text-center mt-5">
+                <div class="certificates-top-row">
+                    <div class="certificate-col">
+                        <div class="certificate-image-wrapper">
+                            <img src="assets/images/sert1.png" alt="Письмо от Митрополита" class="img-fluid">
+                        </div>
+                        <div class="certificate-caption">
+                            Письмо от Митрополита
+                        </div>
+                        <img src="assets/images/line3.png" alt="" class="divider-line img-fluid">
                     </div>
-                    <div class="image-text">
-                        Письмо от Митрополита
+                    <div class="certificate-col">
+                        <div class="certificate-image-wrapper">
+                            <img src="assets/images/sert2.png" alt="Письмо Сенатора" class="img-fluid">
+                        </div>
+                        <div class="certificate-caption">
+                            Письмо Сенатора
+                        </div>
+                        <img src="assets/images/line3.png" alt="" class="divider-line img-fluid">
                     </div>
-                    <img src="assets/images/line3.png" alt="" class="img-fluid">
                 </div>
-                <div class="col-6 col-lg-3">
-                    <div class="image-wrapper-2">
-                        <img src="assets/images/sert2.png" alt="" class="img-fluid"
-                            style=" margin-top: 53px;">
+                <div class="certificates-bottom-row">
+                    <div class="certificate-col-wide">
+                        <div class="certificate-image-wrapper">
+                            <img src="assets/images/sert3.png" alt="Служба в Угледаре" class="img-fluid">
+                        </div>
+                        <div class="certificate-caption">
+                            Служба в Угледаре
+                        </div>
+                        <img src="assets/images/line4.png" alt="" class="divider-line img-fluid">
                     </div>
-                    <div class="image-text">
-                        Письмо Сенатора
-                    </div>
-                    <img src="assets/images/line3.png" alt="" class="img-fluid">
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="image-wrapper-2">
-                        <img src="assets/images/sert3.png" class="img-fluid">
-                    </div>
-                    <div class="image-text">
-                        Служба в Угледаре
-                    </div>
-                    <img src="assets/images/line4.png" alt="" class="img-fluid">
                 </div>
             </div>
+
+            <style>
+               /* Основной контейнер */
+.certificates-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Верхняя строка с двумя изображениями */
+.certificates-top-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Нижняя строка с одним изображением */
+.certificates-bottom-row {
+    width: 100%;
+}
+
+/* Колонка для первых двух изображений */
+.certificate-col {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Широкая колонка для нижнего изображения */
+.certificate-col-wide {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Обертка для изображения */
+.certificate-image-wrapper {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* Подпись к изображению */
+.certificate-caption {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Разделительная линия */
+.divider-line {
+    margin-top: 10px;
+    max-width: 100%;
+}
+
+/* Адаптация для очень маленьких экранов */
+@media (max-width: 400px) {
+    .certificate-col {
+        flex: 1 1 100%;
+    }
+    
+    .certificates-top-row {
+        gap: 20px;
+    }
+}
+            </style>
 
 
         </div>
