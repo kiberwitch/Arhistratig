@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-utilities.css">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <!-- Apple Touch Icon (for iOS devices) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <!-- Android/Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Manrope:wght@400;500&display=swap"
+        rel="stylesheet">
+    <title>Архистратиг</title>
+</head>
+
+<div class="modal" id="donationModal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="donation-form">
+            <h2>Сумма пожертвования</h2>
+            <div class="amount-buttons">
+                <button>500 р.</button>
+                <button>800 р.</button>
+                <button>1500 р.</button>
+                <button>3000 р.</button>
+                <button>5000 р.</button>
+                <button>10000 р.</button>
+                <button id="otherSum">Другая сумма</button>
+            </div>
+
+            <div id="otherAmountContainer" style="display: none;">
+                <label for="otherAmount">Введите сумму:</label>
+                <input type="number" id="otherAmount" placeholder="Введите сумму" min="1">
+            </div>
+
+            <h2>Данные</h2>
+            <form>
+                <input type="email" placeholder="E-mail *" required>
+                <input type="text" placeholder="Имя">
+                <input type="tel" placeholder="Телефон">
+
+                <button type="submit" class="submit-btn">Пожертвовать</button>
+
+                <div class="consent">
+                    <input type="checkbox" id="consent" checked>
+                    <label for="consent">
+                        Принимаю <a href="#">оферту сервиса</a> и условия <a href="#">обработки персональных данных</a>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<body>
+    <header>
+        <div class="logo-container"><img src="assets/images/logo.png" alt=""></div>
+
+        <div class="burger-menu" id="burgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-container">
+            <nav>
+                <a href="#what">Что необходимо</a>
+                <a href="#rebuild_temples">Восстановление храмов</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+        </div>
+        <button class="help-btn payButton">ПОМОЧЬ</button>
+
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#what">Что необходимо</a>
+            <a href="#rebuild_temples">Восстановление храмов</a>
+            <a href="#contacts">Контакты</a>
+        </div>
+    </header>
+
+    <section id="what" class="help-content">
+        <div class="container-fluid">
+            <div class="container pt-5">
+                <div class="row help-header">
+                    <div class="help-header">
+                        Оставшимся жителям Угледара и Верхнеторецкого в ДНР <u>нужна помощь</u>!
+                    </div>
+                </div>
+                <div class="row help-text">
+                    <div class="help-text mt-3">
+                        <b>Фонд Архистратиг по благословению митрополита Донецкого и Мариупольского Владимира
+                            организовал
+                            сбор
+                            средств</b>, помогая отцу Фёдору и отцу Евгению приобретать необходимые жителям продукты,
+                        одежду,
+                        лекарства,
+                        генераторы, газ для баллонов и многое другое.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1">
+                        <button class="section-help-btn-header mt-4 payButton">ПОМОЧЬ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="photo-content mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="header-text-photo">
+                    Порой единственной связью с миром для них остаются священнослужители Донецкой епархии.
+                </div>
+            </div>
+            <div class="row">
+                <!-- Left Column (avatar blocks) -->
+                <div class="col-md-6">
+                    <!-- First Avatar Block -->
+                    <div class="avatar-block m-4 d-flex flex-column flex-md-row align-items-center">
+                        <div class="avatar-circle me-md-3 mb-3 mb-md-0">
+                            <svg class="person-icon" viewBox="0 0 24 24">
+                                <img src="assets/images/avatar1.png" alt="">
+                            </svg>
+                        </div>
+                        <span class="avatar-text text-center text-md-start">Так <b>благочинный отец Фёдор</b>, рискуя
+                            попасть под атаку дронов или
+                            наехать на мину, каждую неделю на легковом автомобиле отправляется в Угледар, чтобы
+                            привезти самое необходимое: воду, еду, одежду, лекарства для остающихся в городе 25
+                            человек.</span>
+                    </div>
+
+                    <!-- Second Avatar Block -->
+                    <div class="avatar-block m-4 d-flex flex-column flex-md-row align-items-center">
+                        <div class="avatar-circle me-md-3 mb-3 mb-md-0">
+                            <svg class="person-icon" viewBox="0 0 24 24">
+                                <img src="assets/images/avatar2.png" alt="">
+                            </svg>
+                        </div>
+                        <span class="avatar-text text-center text-md-start">В Верхнеторецком <b>отец Евгений</b>
+                            организовал постоянное
+                            пополнение и
+                            доставку в села газовых баллонов для приготовления еды и обогрева.</span>
+                    </div>
+
+                    <div class="col-12 order-3 mt-3 d-none d-md-block">
+                        <div class="text-photo-content text-center mx-auto">
+                            Это помощь, которая нужна каждый день!
+                        </div>
+                    </div>
+
+                    <!-- Button - appears fourth -->
+                    <div class="col-12 order-4 text-center mt-4 d-none d-md-block">
+                        <button class="section-help-btn payButton">ПОМОЧЬ</button>
+                    </div>
+                </div>
+
+                <!-- Right Column (image) - appears second on mobile -->
+                <div class="col-12 order-md-2 col-md-6 mb-md-0 order-1">
+                    <img src="assets/images/support.png" alt="photo_2" class="img-fluid w-100 order-1">
+                </div>
+
+                <div class="col-12 order-3 mt-1 d-md-none">
+                    <div class="text-photo-content text-center mx-auto">
+                        Это помощь, которая нужна каждый день!
+                    </div>
+                </div>
+
+                <!-- Button - appears fourth -->
+                <div class="col-12 order-4 text-center mt-4 d-md-none">
+                    <button class="section-help-btn payButton">ПОМОЧЬ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="liner d-none d-md-block">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12 text-center"> <!-- Добавлено text-center -->
+                    <img src="assets/images/linear.png" class="d-block mx-auto" alt="linier">
+                    <!-- mx-auto выравнивает по центру внутри col-md-12 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="photo-contents d-none d-md-block">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="photo-card">
+                        <img src="assets/images/photo1.png" alt="Фото 1">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="photo-card">
+                        <img src="assets/images/photo2.png" alt="Фото 2">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="photo-card">
+                        <img src="assets/images/photo3.png" alt="Фото 3">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="photo-card">
+                        <img src="assets/images/photo4.png" alt="Фото 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="communication">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <!-- First on mobile: "But only your support" text -->
+                <div class="col-12 order-1 d-md-none">
+                    <img src="assets/images/cross.png" alt="" class="order-2 d-md-none d-block mx-auto mt-5">
+                    <div class="text-help-2 mt-4 mx-auto text-center">
+                        Но только ваша поддержка и участие позволят помогать регулярно, на постоянной основе!
+                    </div>
+
+                    <div class="text-info-2 mt-3 mt-md-5">
+                        <p>
+                            Сотни мирных жителей остаются в подвалах и разрушенных домах Угледара и Верхнеторецкого без
+                            света и воды, тепла и газа, магазинов и аптек, какого-либо соцобслуживания, пока их
+                            эвакуация невозможна. Сохраняется постоянная угроза «прилётов», артиллерийского обстрела,
+                            неразорвавшихся снарядов. Им нужна наша поддержка!
+                        </p>
+                    </div>
+
+                    <div class="text-center mt-3 mt-md-5 mb-3 mb-md-5">
+                        <button class="section-comm-btn mt-3 mt-md-5 payButton">ПОМОЧЬ</button>
+                    </div>
+
+                    <figcaption class="communication-text-container mt-2 d-md-none">
+                        Обращение отца Евгения о газе для жителей
+                    </figcaption>
+                    <img class="d-md-none" src="assets/images/line.png" alt="">
+
+                </div>
+
+                <!-- Video column -->
+                <div class="col-md-6 order-md-1 order-3 text-center mt-3 mt-md-0">
+                    <div class="video-wrapper">
+                        <video class="video" controls>
+                            <source src="assets/videos/communication.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает видео элемент.
+                        </video>
+                        <figcaption class="communication-text-container mt-2 d-none d-md-block">
+                            Обращение отца Евгения о газе для жителей
+                        </figcaption>
+                        <img class="d-none d-md-block" src="assets/images/line.png" style="margin-top: 20px" alt="">
+                    </div>
+                </div>
+
+                <!-- Text content column -->
+                <div class="col-md-6 order-md-2 order-2 d-flex flex-column d-none d-md-block">
+                    <img src="assets/images/cross.png" alt="" class="order-8 d-none d-md-block mx-auto">
+                    <div class="text-info-2 mt-3 mt-md-5">
+                        <p>
+                            Сотни мирных жителей остаются в подвалах и разрушенных домах Угледара и Верхнеторецкого без
+                            света и воды, тепла и газа, магазинов и аптек, какого-либо соцобслуживания, пока их
+                            эвакуация невозможна. Сохраняется постоянная угроза «прилётов», артиллерийского обстрела,
+                            неразорвавшихся снарядов. Им нужна наша поддержка!
+                        </p>
+                    </div>
+
+                    <!-- "But only your support" text - desktop version -->
+                    <div class="wrapper-text d-none d-md-block">
+                        <div class="text-help-2 mt-4 mx-auto text-center">
+                            Но только ваша поддержка и участие позволят помогать регулярно, на постоянной основе!
+                        </div>
+                    </div>
+
+                    <div class="button-wrapper text-center mt-3 mt-md-5 mb-3 mb-md-5">
+                        <button class="section-comm-btn mt-3 mt-md-5 payButton">ПОМОЧЬ</button>
+                    </div>
+                    <div class="mt-auto mt-2 align-self-center">
+                        <img src="assets/images/hands.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="liberation">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="image-wrapper">
+                        <img src="assets/images/photo5.png" alt="" class="img-fluid">
+                        <div class="text-wrapper-2 text-center">
+                            Отец Федор в Угледаре в первые дни после освобождения города
+                            <img src="assets/images/line2.png" alt="" class="img-fluid">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex flex-column mt-0">
+                    <div class="content-liberation">
+                        С самых первых недель освобождения Угледара и постепенного отдаления линии фронта от Авдеевки и
+                        Верхнеторецкого осенью 2024 года фонд Архистратиг собирает и направляет средства на покупку
+                        необходимых продуктов и вещей. Это очень адресная, конкретная помощь людям, которая нужна здесь
+                        и сейчас. <b>Сенатор Федерального Собрания Российской Федерации от ДНР Наталья Никанорова
+                            отметила
+                            работу фонда</b> в Волновахском районе, отдельно поблагодарив за помощь жителям Угледара в
+                        первые
+                        дни после освобождения города
+                    </div>
+                    <div class="lib-button-wrapper text-center mt-2 align-self-center mt-auto">
+                        <button class="section-comm-btn mt-5 payButton d-none d-md-block">ПОМОЧЬ</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center mt-5">
+                <div class="col-6 col-lg-3">
+                    <div class="image-wrapper-2">
+                        <img src="assets/images/sert1.png" alt="" class="img-fluid"
+                            style="height: 100%; margin-top: 53px;">
+                    </div>
+                    <div class="image-text">
+                        Письмо от Митрополита
+                    </div>
+                    <img src="assets/images/line3.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="image-wrapper-2">
+                        <img src="assets/images/sert2.png" alt="" class="img-fluid"
+                            style="height: 100%; margin-top: 53px;">
+                    </div>
+                    <div class="image-text">
+                        Письмо Сенатора
+                    </div>
+                    <img src="assets/images/line3.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="image-wrapper-2">
+                        <img src="assets/images/sert3.png" class="img-fluid">
+                    </div>
+                    <div class="image-text">
+                        Служба в Угледаре
+                    </div>
+                    <img src="assets/images/line4.png" alt="" class="img-fluid">
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="rebuild_temples" class="fund mt-5">
+        <div style="padding-top: 100px; margin-top: -100px;"></div>
+        <div class="container-fluid">
+            <div class="container--info">
+                <div class="restoration-block">
+                    <div class="restoration-row">
+                        <!-- Основной блок (слева на десктопе, снизу на мобилке) -->
+                        <div class="restoration-col restoration-main">
+                            <div class="restoration-card">
+                                <div class="restoration-header">
+                                    <b>фонд оказал помощь в ремонте и восстановлении:</b>
+                                    <button class="restoration-year">
+                                        <span>В 2023-2024 Г.</span>
+                                    </button>
+                                </div>
+                                <div class="restoration-content">
+                                    <b>1. Свято-Николаевскому храму в Новогнатовке</b>, который пострадал от прямого
+                                    попадания
+                                    снаряда в алтарную часть. Прошли масштабные работы с заменой практически всей
+                                    внутренней отделки,
+                                    усилением каркаса, утеплением. Небольшой храм стал истинным символом возрождения!
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Блок, который должен быть справа на десктопе, но первым на мобилке -->
+                        <div class="restoration-col restoration-secondary">
+                            <div class="restoration-description">
+                                Во время боев за освобождение городов и сёл Донецкой Народной Республики были разрушены
+                                и сильно
+                                пострадали десятки храмов. Прямой наводкой украинские националисты били по беззащитным
+                                православным святыням!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <style>
+                    .restoration-block {
+                        max-width: 1600px;
+                        margin: 0 auto;
+                        padding: 0 15px;
+                    }
+
+                    /* Строка с колонками */
+                    .restoration-row {
+                        display: flex;
+                        align-items: center;
+                        gap: 30px;
+                    }
+
+                    /* Общие стили колонок */
+                    .restoration-col {
+                        flex: 1;
+                        min-width: 0;
+                        /* Для правильного сжатия */
+                    }
+
+                    /* Карточка с информацией о восстановлении */
+                    .restoration-card {
+                        background: #fff;
+                        border-radius: 8px;
+                        padding: 25px;
+                        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+                    }
+
+                    /* Заголовок карточки */
+                    .restoration-header {
+                        font-family: 'Cormorant Garamond';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 39px;
+                        line-height: 45px;
+                        text-transform: uppercase;
+                        color: #C1A96F;
+
+
+                    }
+
+                    /* Кнопка с годом */
+                    .restoration-year {
+                        padding: 5px 40px;
+                        border: none;
+                        font-family: 'Manrope';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 19px;
+                        line-height: 45px;
+                        text-align: center;
+                        text-transform: lowercase;
+                        color: #FFFFFF;
+                        background: #C1A96F;
+                        border-radius: 40px;
+
+
+                    }
+
+
+
+                    /* Основной текст */
+                    .restoration-content {
+                        font-family: 'Manrope';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 24px;
+                        line-height: 33px;
+                        color: #261A0C;
+                    }
+
+                    /* Правый блок с описанием */
+                    .restoration-description {
+                        font-family: 'Manrope';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 24px;
+                        line-height: 36px;
+                        color: #C1A96F;
+                    }
+
+                    /* Десктопная версия */
+                    @media (min-width: 769px) {
+                        .restoration-main {
+                            order: 1;
+                        }
+
+                        .restoration-secondary {
+                            order: 2;
+                        }
+                    }
+
+                    /* Мобильная версия */
+                    @media (max-width: 768px) {
+                        .restoration-row {
+                            flex-direction: column;
+                        }
+
+                        .restoration-secondary {
+                            order: 1;
+                        }
+
+                        .restoration-main {
+                            order: 2;
+                        }
+                    }
+                </style>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="assets/images/break1.png" class="img-fluid">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/images/break2.png" class="img-fluid">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/images/break3.png" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <section class="liner">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12 text-center"> <!-- Добавлено text-center -->
+                    <img src="assets/images/linear.png" class="d-block mx-auto" alt="linier">
+                    <!-- mx-auto выравнивает по центру внутри col-md-12 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="providing-help">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="content-help-prov">
+                    <h1 class="title-providing">Фонд оказал помощь в ремонте и восстановлении:</h1>
+                    <button>
+                        <span>В 2023-2024 Г.</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <ol start="2" class="ol-content1">
+                        <li>Свято-Николаевскому храму в селе Николаевка </li>
+                        <li>Свято-Николаевскому храму в Новогнатовке </li>
+                        <li>Свято-Скорбященскому храму в Волновахе </li>
+                    </ol>
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/images/xram1.png" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/images/xram2.png" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <ol start="5" class="ol-content2">
+                        <li>Храму Архистратига Михаила во Владимировке  </li>
+                        <li>Храму Рождества Божьей Материи в Валерьяновке </li>
+                        <li>Свято-Духовскому храму в Волновахе </li>
+                    </ol>
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/images/xram3.png" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/images/xram4.png" class="img-fluid">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="assets/images/xram5.png" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/images/xram6.png" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/images/xram7.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts">
+        <footer class="footer text-white mt-5">
+            <div class="container">
+                <div class="row gx-4 gy-4 align-items-start">
+                    <!-- Логотип -->
+                    <div class="col-12 col-md-4 text-center text-md-start">
+                        <div class="logo-container mb-3 mx-auto mx-md-0" style="max-width: 200px;">
+                            <img src="assets/images/logo.png" alt="Логотип компании" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <!-- Контакты -->
+                    <div class="col-12 col-md-4">
+                        <div class="contact-info text-center text-md-start">
+                            <h2 class="mb-3">Контакты</h2>
+                            <div class="contact-description">
+                                <div class="mb-2">
+                                    <strong>Адрес:</strong><br>
+                                    г. Краснодар, ул. Рождественская Набережная 45/1, оф 4
+                                </div>
+                                <div class="mb-2">
+                                    <strong>Телефон:</strong><br>
+                                    8 988 140-14-79
+                                </div>
+                                <div class="doc">
+                                    <a href="https://disk.yandex.ru/d/ljALqyUo1dbUqw"
+                                        class="text-decoration-underline">Документы</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Реквизиты -->
+                    <div class="col-12 col-md-4">
+                        <div class="details text-center text-md-start">
+                            <h2 class="mb-3">Реквизиты</h2>
+                            <div class="details-description">
+                                <div class="mb-2">
+                                    <strong>ИНН/КПП:</strong> 2308269784/230801001
+                                </div>
+                                <div class="mb-2">
+                                    <strong>ОГРН:</strong> 1192375076310
+                                </div>
+                                <div class="mb-2">
+                                    <strong>ОКПО:</strong> 42072670
+                                </div>
+                                <div class="mb-2">
+                                    <strong>р/с:</strong> 40701810506350000002
+                                </div>
+                                <div class="mb-2">
+                                    в филиале «ЦЕНТРАЛЬНЫЙ» банка ВТБ (ПАО) г. Краснодар
+                                </div>
+                                <div class="mb-2">
+                                    <strong>к/с:</strong> 30101810145250000411
+                                </div>
+                                <div>
+                                    <strong>БИК:</strong> 044525411
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="powered-by" style="display: none">{$POWERED_BY$}</div>
+        </footer>
+    </section>
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+                if (document.scripts[j].src === r) { return; }
+            }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a);
+        })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(101404452, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/101404452" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+    <script src="assets/js/index.js"></script>
+    <script src="https://pay.yandex.ru/checkout.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js"></script>
+</body>
+
+</html>
