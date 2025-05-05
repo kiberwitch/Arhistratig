@@ -466,8 +466,16 @@ nav a:hover {
 /* Photo-content */
 .avatar-block {
   display: flex;
+  height: 400px;
   align-items: center;
   gap: 12px;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .avatar-block {
+    height: 200px;
+  }
 }
 
 .avatar-circle {

@@ -152,31 +152,60 @@
                             доставку в села газовых баллонов для приготовления еды и обогрева.</span>
                     </div>
 
-                    <div class="col-12 order-3 mt-3 d-none d-md-block">
-                        <div class="text-photo-content text-center mx-auto">
+                    <div class="avatar-info-text">
+                        <div class="avatar-info-text">
                             Это помощь, которая нужна каждый день!
                         </div>
                     </div>
 
+            
+                    <style> 
+                        .avatar-info-text {
+                               font-family: 'Cormorant Garamond';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 42px;
+                    line-height: 48px;
+                    /* or 114% */
+                    text-transform: uppercase;
+                    text-align: center;
+                    color: #C1A96F;
+                    
+                        }
+                    </style>
+                 
+                    
+
+
+
                     <!-- Button - appears fourth -->
-                    <div class="col-12 order-4 text-center mt-4 d-none d-md-block">
+                    <div class="button-appears">
                         <button class="section-help-btn payButton">ПОМОЧЬ</button>
                     </div>
                 </div>
+<style>
+    .button-appears {
+        display: flex;
+        justify-content: center;
+    }
+</style>
 
+
+
+                
                 <!-- Right Column (image) - appears second on mobile -->
                 <div class="col-12 order-md-2 col-md-6 mb-md-0 order-1">
                     <img src="assets/images/support.png" alt="photo_2" class="img-fluid w-100 order-1">
                 </div>
 
                 <div class="col-12 order-3 mt-1 d-md-none">
-                    <div class="text-photo-content text-center mx-auto">
+                    <div class="avatar-info-text">
                         Это помощь, которая нужна каждый день!
                     </div>
                 </div>
 
                 <!-- Button - appears fourth -->
-                <div class="col-12 order-4 text-center mt-4 d-md-none">
+                <div class="button-appears order-4">
                     <button class="section-help-btn payButton">ПОМОЧЬ</button>
                 </div>
             </div>
@@ -227,7 +256,7 @@
                 <!-- First on mobile: "But only your support" text -->
                 <div class="col-12 order-1 d-md-none">
                     <img src="assets/images/cross.png" alt="" class="order-2 d-md-none d-block mx-auto mt-5">
-                    <div class="text-help-2 mt-4 mx-auto text-center">
+                    <div class="text-help-2" style="text-align: center;">
                         Но только ваша поддержка и участие позволят помогать регулярно, на постоянной основе!
                     </div>
 
@@ -253,7 +282,7 @@
 
                 <!-- Video column -->
                 <div class="col-md-6 order-md-1 order-3 text-center mt-3 mt-md-0">
-                    <div class="video-wrapper">
+                    <div class="video-wrapper" style="margin-top: 90px;">
                         <video class="video" controls>
                             <source src="assets/videos/communication.mp4" type="video/mp4">
                             Ваш браузер не поддерживает видео элемент.
@@ -279,8 +308,8 @@
 
                     <!-- "But only your support" text - desktop version -->
                     <div class="wrapper-text d-none d-md-block">
-                        <div class="text-help-2 mt-4 mx-auto text-center">
-                            Но только ваша поддержка и участие позволят помогать регулярно, на постоянной основе!
+                        <div class="text-help-2" style="text-align: center; margin-top: 100px;">
+                            Но только ваша поддержка и участие <br> позволят помогать регулярно, на <br> постоянной основе!
                         </div>
                     </div>
 
@@ -298,7 +327,7 @@
     <section class="liberation">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" style="height: 700px;">
                     <div class="image-wrapper">
                         <img src="assets/images/photo5.png" alt="" class="img-fluid">
                         <div class="text-wrapper-2 text-center">
@@ -308,12 +337,15 @@
 
                     </div>
                 </div>
-                <div class="col-md-6 d-flex flex-column mt-0">
+                <div class="col-md-6 d-flex flex-column mt-0" style="height: 550px;">
                     <div class="content-liberation">
                         С самых первых недель освобождения Угледара и постепенного отдаления линии фронта от Авдеевки и
                         Верхнеторецкого осенью 2024 года фонд Архистратиг собирает и направляет средства на покупку
                         необходимых продуктов и вещей. Это очень адресная, конкретная помощь людям, которая нужна здесь
-                        и сейчас. <b>Сенатор Федерального Собрания Российской Федерации от ДНР Наталья Никанорова
+                        и сейчас. 
+                        <br> 
+                        <br>
+                        <b>Сенатор Федерального Собрания Российской Федерации от ДНР Наталья Никанорова
                             отметила
                             работу фонда</b> в Волновахском районе, отдельно поблагодарив за помощь жителям Угледара в
                         первые
@@ -334,23 +366,6 @@
                         <div class="certificate-caption">
                             Письмо от Митрополита
                         </div>
-
-<style>
-    .certificate-caption {font-family: 'Manrope';
-                        font-style: normal;
-                        font-weight: 700;
-                        font-size: 19px;
-                        line-height: 24px;
-                        /* identical to box height, or 126% */
-                        
-                        color: #C1A96F;
-                         } 
-</style>
-
-
-
-
-
                         <img src="assets/images/line3.png" alt="" class="divider-line img-fluid">
                     </div>
                     <div class="certificate-col">
@@ -375,70 +390,159 @@
                     </div>
                 </div>
             </div>
-
+            
             <style>
-               /* Основной контейнер */
-.certificates-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-}
-
-/* Верхняя строка с двумя изображениями */
-.certificates-top-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 15px;
-    width: 100%;
-}
-
-/* Нижняя строка с одним изображением */
-.certificates-bottom-row {
-    width: 100%;
-}
-
-/* Колонка для первых двух изображений */
-.certificate-col {
-    flex: 1 1 calc(50% - 10px);
-    min-width: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Широкая колонка для нижнего изображения */
-.certificate-col-wide {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Обертка для изображения */
-.certificate-image-wrapper {
-    margin-bottom: 10px;
-    width: 100%;
-}
-
-
-/* Разделительная линия */
-.divider-line {
-    margin-top: 10px;
-    max-width: 100%;
-}
-
-/* Адаптация для очень маленьких экранов */
-@media (max-width: 400px) {
-    .certificate-col {
-        flex: 1 1 100%;
-    }
-    
-    .certificates-top-row {
-        gap: 20px;
-    }
-}
+                /* Общие стили для всех устройств */
+                .certificate-caption {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 700;
+                    color: #C1A96F;
+                }
+                
+                .certificates-grid {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+                
+                .certificates-top-row {
+                    display: flex;
+                    width: 100%;
+                }
+                
+                .certificates-bottom-row {
+                    width: 100%;
+                }
+                
+                .certificate-col {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                
+                .certificate-col-wide {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                
+                .certificate-image-wrapper {
+                    margin-bottom: 10px;
+                    width: 100%;
+                }
+                
+                .certificate-image-wrapper img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+                
+                .divider-line {
+                    margin-top: 10px;
+                    width: 100%;
+                    display: block;
+                }
+                
+                /* Стили для десктопов (1024px и больше) */
+                @media (min-width: 1024px) {
+                    .certificates-grid {
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        gap: 30px;
+                        padding: 0 20px;
+                    }
+                    
+                    .certificates-top-row {
+                        gap: 30px;
+                        justify-content: center;
+                    }
+                    
+                    .certificate-col {
+                        flex: 0 1 450px;
+                    }
+                    
+                    .certificate-col-wide {
+                        max-width: 900px;
+                        margin: 0 auto;
+                    }
+                    
+                    .certificate-caption {
+                        font-size: 22px;
+                        line-height: 28px;
+                        margin-bottom: 5px;
+                    }
+                    
+                    .divider-line {
+                        max-width: 80%;
+                    }
+                }
+                
+                /* Стили для планшетов (768px - 1023px) */
+                @media (min-width: 768px) and (max-width: 1023px) {
+                    .certificates-grid {
+                        gap: 25px;
+                        padding: 0 15px;
+                    }
+                    
+                    .certificates-top-row {
+                        gap: 20px;
+                    }
+                    
+                    .certificate-col {
+                        flex: 1;
+                    }
+                    
+                    .certificate-caption {
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+                    
+                    .divider-line {
+                        max-width: 85%;
+                    }
+                }
+                
+                /* Стили для мобильных (до 767px) */
+                @media (max-width: 767px) {
+                    .certificates-grid {
+                        gap: 20px;
+                        padding: 0 10px;
+                    }
+                    
+                    .certificates-top-row {
+                        gap: 10px;
+                    }
+                    
+                    .certificate-caption {
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                    
+                    .divider-line {
+                        max-width: 90%;
+                    }
+                }
+                
+                /* Точечная адаптация для 390px */
+                @media (max-width: 390px) {
+                    .certificates-grid {
+                        gap: 15px;
+                    }
+                    
+                    .certificates-top-row {
+                        gap: 8px;
+                    }
+                    
+                    .certificate-caption {
+                        font-size: 15px;
+                    }
+                    
+                    .divider-line {
+                        max-width: 85%;
+                    }
+                }
             </style>
 
 
@@ -446,7 +550,6 @@
     </section>
 
     <section id="rebuild_temples" class="fund mt-5">
-        <div style="padding-top: 100px; margin-top: -100px;"></div>
         <div class="container-fluid">
             <div class="container--info">
                 <style>
@@ -714,19 +817,9 @@
 
     </section>
 
-    <section class="liner">
-        <div class="container-fluid">
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-12 text-center"> <!-- Добавлено text-center -->
-                    <img src="assets/images/linear.png" class="d-block mx-auto" alt="linier">
-                    <!-- mx-auto выравнивает по центру внутри col-md-12 -->
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="providing-help">
         <div class="container">
+            <!-- Заголовок секции -->
             <div class="row mb-4">
                 <div class="content-help-prov">
                     <h1 class="title-providing">Фонд оказал помощь в ремонте и восстановлении:</h1>
@@ -735,51 +828,135 @@
                     </button>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <ol start="2" class="ol-content1">
-                        <li>Свято-Николаевскому храму в селе Николаевка </li>
-                        <li>Свято-Николаевскому храму в Новогнатовке </li>
-                        <li>Свято-Скорбященскому храму в Волновахе </li>
+    
+            <!-- Основной контент - список слева и фото справа -->
+            <div class="row main-content">
+                <!-- Список храмов (уменьшенная ширина) -->
+                <div class="col-lg-5 temples-list">
+                    <ol class="temple-items">
+                        <li>Свято-Николаевскому храму в селе Николаевка</li>
+                        <li>Свято-Николаевскому храму в Новогнатовке</li>
+                        <li>Свято-Скорбященскому храму в Волновахе</li>
+                        <li>Храму Архистратига Михаила во Владимировке</li>
+                        <li>Храму Рождества Божьей Материи в Валерьяновке</li>
+                        <li>Свято-Духовскому храму в Волновахе</li>
                     </ol>
                 </div>
-                <div class="col-md-4">
-                    <img src="assets/images/xram1.png" class="img-fluid">
-                </div>
-                <div class="col-md-4">
-                    <img src="assets/images/xram2.png" class="img-fluid">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <ol start="5" class="ol-content2">
-                        <li>Храму Архистратига Михаила во Владимировке  </li>
-                        <li>Храму Рождества Божьей Материи в Валерьяновке </li>
-                        <li>Свято-Духовскому храму в Волновахе </li>
-                    </ol>
-                </div>
-                <div class="col-md-4">
-                    <img src="assets/images/xram3.png" class="img-fluid">
-                </div>
-                <div class="col-md-4">
-                    <img src="assets/images/xram4.png" class="img-fluid">
+                
+                <!-- Фотографии справа (увеличенная ширина) -->
+                <div class="col-lg-7 temple-photos-right">
+                    <div class="row g-3"> <!-- Добавлены отступы между фото -->
+                        <div class="col-md-6">
+                            <img src="assets/images/xram1.png" class="img-fluid temple-photo">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="assets/images/xram2.png" class="img-fluid temple-photo">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="assets/images/xram3.png" class="img-fluid temple-photo">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="assets/images/xram4.png" class="img-fluid temple-photo">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row">
+    
+            <!-- Фотографии под текстом -->
+            <div class="row temple-photos-bottom g-3 mt-3"> <!-- Добавлены отступы -->
                 <div class="col-md-4">
-                    <img src="assets/images/xram5.png" class="img-fluid">
+                    <img src="assets/images/xram5.png" class="img-fluid temple-photo">
                 </div>
                 <div class="col-md-4">
-                    <img src="assets/images/xram6.png" class="img-fluid">
+                    <img src="assets/images/xram6.png" class="img-fluid temple-photo">
                 </div>
                 <div class="col-md-4">
-                    <img src="assets/images/xram7.png" class="img-fluid">
+                    <img src="assets/images/xram7.png" class="img-fluid temple-photo">
                 </div>
             </div>
         </div>
     </section>
+    
+    <style>
+        /* Общие стили */
+        .container {
+            max-width: 1200px;
+        }
+        
+        /* Стили для списка */
+
+        .temple-photos-right {
+            margin: 0 auto;
+        }
+        .temples-list {
+            padding-right: 20px;
+        }
+        
+        .temple-items {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            color: #261A0C;
+            padding-left: 20px;
+            margin: 0;
+            width: 300px;
+        }
+        
+        .temple-items li {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            padding-left: 8px;
+        }
+        
+        /* Стили для фотографий */
+        .temple-photo {
+            width: 100%;
+            height: 200px; /* Фиксированная высота для выравнивания */
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .temple-photo:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        /* Выравнивание сетки */
+        .main-content {
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        /* Адаптация */
+        @media (max-width: 992px) {
+            .temples-list {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            .temple-items li {
+                font-size: 16px;
+            }
+            
+            .temple-photo {
+                height: 180px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .temple-photo {
+                height: 160px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .temple-photo {
+                height: 140px;
+            }
+        }
+    </style>
 
     <section id="contacts">
         <footer class="site-footer text-white mt-5">
